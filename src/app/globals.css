@@ -1,23 +1,84 @@
 @import "tailwindcss";
 
-:root{
-  --background:#0B0B0B;
-  --primary:#E63946;
-  --secondary:#9D0208;
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --background: #0b0b0b;
+  --primary: #e63946;
+  --secondary: #9d0208;
 
-  --text:#FFFFFF;
-  --muted:#B0B0B0;
+  --text: #ffffff;
+  --muted: #b0b0b0;
 
-  --glass:rgba(255,255,255,0.05);
-  --border:rgba(255,255,255,0.08);
+  --glass: rgba(255, 255, 255, 0.05);
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-html{
-  scroll-behavior:smooth;
+/* =========================
+   BASE STYLES
+========================= */
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  background:var(--background);
-  color:var(--text);
-  overflow-x:hidden;
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--background);
+  color: var(--text);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   SCROLLBAR (hidden but safe)
+========================= */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* =========================
+   TEXT SELECTION
+========================= */
+::selection {
+  background: rgba(230, 57, 70, 0.3);
+}
+
+/* =========================
+   GLASS EFFECT (clean reusable)
+========================= */
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+/* =========================
+   INPUT SYSTEM (merged + cleaned)
+========================= */
+.input,
+.contact-input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input:focus,
+.contact-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(230, 57, 70, 0.25);
+}
+
+.input::placeholder,
+.contact-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
 }
