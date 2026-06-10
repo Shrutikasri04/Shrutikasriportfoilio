@@ -67,20 +67,7 @@ export default function IntroScreen({
         "
         >
           {/* Ghost Text */}
-          <h1
-            className="
-            absolute
-            text-[22vw]
-            md:text-[16vw]
-            font-black
-            text-white/[0.03]
-            pointer-events-none
-            select-none
-            tracking-tight
-          "
-          >
-            AI
-          </h1>
+          
 
           {/* Glow */}
           <div
