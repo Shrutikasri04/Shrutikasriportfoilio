@@ -9,7 +9,7 @@ import About from "../components/About";
 import ProjectsShowcase from "../components/ProjectsShowcase";
 import Skills from "../components/Skills";
 import Contact from "../components/Contact";
-
+import Footer from "../components/Footer";
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
 
@@ -28,6 +28,7 @@ export default function Home() {
           <ProjectsShowcase />
           <Skills />
           <Contact />
+          <Footer />
         </main>
       )}
     </>
